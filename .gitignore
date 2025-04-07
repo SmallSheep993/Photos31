@@ -1,0 +1,10 @@
+# Ignore compiled output
+out/
+*.class
+
+# Ignore IDE configs
+.vscode/
+.idea/
+
+# MacOS junk
+.DS_Store
