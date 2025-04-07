@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:controller="view.PhotoController"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <left>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Button fx:id="addPhotoButton" text="Add Photo" onAction="#handleAddPhoto"/>
+                <Button fx:id="deletePhotoButton" text="Delete Photo" onAction="#handleDeletePhoto"/>
+                <Button fx:id="editDescriptionButton" text="Edit Description" onAction="#handleEditDescription"/>
+                <Button fx:id="addTagButton" text="Add Tag" onAction="#handleAddTag"/>
+                <Button fx:id="removeTagButton" text="Remove Tag" onAction="#handleRemoveTag"/>
+                <Button fx:id="copyPhotoButton" text="Copy Photo" onAction="#handleCopyPhoto"/>
+                <Button fx:id="movePhotoButton" text="Move Photo" onAction="#handleMovePhoto"/>
+                <TextField fx:id="searchField" promptText="Enter tag to search"/>
+                <Button fx:id="searchButton" text="Search" onAction="#handleSearch"/>
+                <Button fx:id="clearSearchButton" text="Clear Search" onAction="#handleClearSearch"/>
+                <Button fx:id="createAlbumFromResultsButton" text="Create Album from Results" onAction="#handleCreateAlbumFromSearch"/>
+                <Button fx:id="backToAlbumsButton" text="Back to Albums" onAction="#handleBackToAlbums"/>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <ListView fx:id="photoListView" prefWidth="500" prefHeight="400"/>
+    </center>
+</BorderPane>
